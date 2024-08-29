@@ -1,0 +1,86 @@
+
+/*-------------------------------------------
+	Misc.
+-------------------------------------------*/
+
+
+// Set the max-width of a container
+
+
+.wrap {
+
+	@include wrap;
+
+}
+
+
+// Clear parent of floated elements
+
+
+.group {
+
+	@include group;
+
+}
+
+
+// Sticky Footer
+
+
+/*
+
+#wrapper {
+
+	@media screen and (min-width: 740px) {
+
+		display: table;
+		height: 100%;
+		width: 100%;
+
+	}
+
+}
+
+#page {
+
+	@media screen and (min-width: 740px) {
+
+		display: table-row;
+		height: 100%;
+
+	}
+
+}
+
+#footer {
+
+	@media screen and (min-width: 740px) {
+
+		display: table-row;
+
+	}
+
+}
+
+*/
+
+
+// Developer Mode
+
+
+#dev {
+
+	position: fixed;
+	left: 5px;
+	bottom: 5px;
+	width: auto;
+	padding: 5px 7px;
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	color: $white;
+	background: rgb(212, 176, 255);
+	z-index: 9999;
+
+}

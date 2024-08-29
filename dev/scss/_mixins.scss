@@ -1,0 +1,242 @@
+
+//-------------------------------------------
+//	Wrap
+//-------------------------------------------
+
+
+@mixin wrap {
+
+	// Actual max-width is 1200px
+
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+}
+
+
+//------------------------------------------------------------
+//	Miscellaneous
+//------------------------------------------------------------
+
+
+// Font Size
+
+
+@mixin font-size($font-size: 16) {
+
+	font-size: #{$font-size}px;
+	font-size: #{$font-size / 10}rem;
+
+}
+
+
+// Higher Density Screens
+
+@mixin retina() {
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+		@content;
+
+	}
+
+}
+
+
+// Self-Clearing Elements
+
+
+@mixin group {
+
+	&:after {
+
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		font-size: 0;
+
+	}
+
+	.lt-ie8 & {
+
+		zoom: 1;
+
+	}
+
+}
+
+
+// Helper for Justified Elements
+
+
+@mixin placeholder {
+
+	&:after {
+
+		content: "";
+		display: inline-block;
+		width: 100%;
+
+	}
+
+}
+
+
+//------------------------------------------------------------
+//	Gradients
+//------------------------------------------------------------
+
+
+// Horizontal
+
+
+@mixin horizontal($startColor: $white, $endColor: $lightergrey) {
+
+	background-color:	$endColor;
+	background-image:	linear-gradient(left, $startColor, $endColor);
+	background-repeat:	repeat-x;
+
+}
+
+
+// Vertical
+
+
+@mixin vertical($startColor: $white, $endColor: $lightergrey) {
+
+	background-color: $endColor;
+	background-image: linear-gradient(top, $startColor, $endColor);
+	background-repeat: repeat-x;
+
+}
+
+@mixin vertical-gradient($top-half, $bottom-half) {
+
+	background: $bottom-half;
+	background: linear-gradient(to bottom, $top-half 50%, $bottom-half 50%);
+
+}
+
+
+// Directional
+
+
+@mixin directional($startColor: $white, $endColor: $lightergrey, $deg: 45deg) {
+
+	background-color:	$endColor;
+	background-image:	linear-gradient($deg, $startColor, $endColor);
+	background-repeat:	repeat-x;
+
+}
+
+
+//------------------------------------------------------------
+//	Transforms
+//------------------------------------------------------------
+
+
+// Rotate
+
+
+@mixin rotate($deg) {
+
+	transform: rotate($deg);
+
+}
+
+// Scale
+
+
+@mixin scale($ratio) {
+
+	transform: scale($ratio);
+
+}
+
+
+// Skew
+
+
+@mixin skew($x: 0, $y: 0) {
+
+	transform: skew($x, $y);
+
+}
+
+
+//------------------------------------------------------------
+//	Visibility
+//------------------------------------------------------------
+
+
+// Image Replacement
+
+
+@mixin hide-text() {
+
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+
+// Hide from visual and speaking browsers
+
+
+@mixin hidden() {
+
+	display: none !important;
+	visibility: hidden;
+
+}
+
+
+// Hide but maintain layout
+
+
+@mixin invisible() {
+
+	visibility: hidden;
+
+}
+
+
+// Hidden but available to speaking browsers
+
+
+@mixin visuallyhidden() {
+
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+
+
+	// Make visuallyhidden focusable with a keyboard
+
+
+	&.focusable {
+
+		&:active,
+		&:focus {
+
+			position: static;
+			clip: auto;
+			height: auto;
+			width: auto;
+			margin: 0;
+			overflow: visible;
+
+		}
+
+	}
+
+}

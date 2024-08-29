@@ -1,0 +1,21 @@
+
+# Miscellaneous
+
+.DS_Store
+node_modules/
+
+# Cache
+
+dist/public/system
+
+# Settings
+
+# Images
+
+details.png
+
+# Title
+
+*.sql
+config.php
+license.key

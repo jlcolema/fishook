@@ -1,0 +1,423 @@
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// Font Family: Raleway
+// Service: Font Squirrel
+// URL: https://www.fontsquirrel.com/fonts/raleway
+
+
+// Thin
+
+@font-face {
+
+	font-family: "Raleway Thin";
+
+	src: url("../fonts/raleway/thin/raleway-thin.woff2") format('woff2'),
+		 url("../fonts/raleway/thin/raleway-thin.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-thin {
+
+	font-family: "Raleway Thin", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Thin Italic
+
+@font-face {
+
+	font-family: "Raleway Thin Italic";
+
+	src: url("../fonts/raleway/thin-italic/raleway-thin-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/thin-italic/raleway-thin-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-thin-italic {
+
+	font-family: "Raleway Thin Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Extra Light
+
+@font-face {
+
+	font-family: "Raleway Extra Light";
+
+	src: url("../fonts/raleway/extra-light/raleway-extra-light.woff2") format('woff2'),
+		 url("../fonts/raleway/extra-light/raleway-extra-light.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-extra-light {
+
+	font-family: "Raleway Extra Light", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Extra Light Italic
+
+@font-face {
+
+	font-family: "Raleway Extra Light Italic";
+
+	src: url("../fonts/raleway/extra-light-italic/raleway-extra-light-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/extra-light-italic/raleway-extra-light-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-extra-light-italic {
+
+	font-family: "Raleway Extra Light Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Light
+
+@font-face {
+
+	font-family: "Raleway Light";
+
+	src: url("../fonts/raleway/light/raleway-light.woff2") format('woff2'),
+		 url("../fonts/raleway/light/raleway-light.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-light {
+
+	font-family: "Raleway Light", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Light Italic
+
+@font-face {
+
+	font-family: "Raleway Light Italic";
+
+	src: url("../fonts/raleway/light-italic/raleway-light-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/light-italic/raleway-light-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-light-italic {
+
+	font-family: "Raleway Light Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Regular
+
+@font-face {
+
+	font-family: "Raleway Regular";
+
+	src: url("../fonts/raleway/regular/raleway-regular.woff2") format('woff2'),
+		 url("../fonts/raleway/regular/raleway-regular.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-regular {
+
+	font-family: "Raleway Regular", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Italic
+
+@font-face {
+
+	font-family: "Raleway Italic";
+
+	src: url("../fonts/raleway/italic/raleway-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/italic/raleway-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-italic {
+
+	font-family: "Raleway Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Medium
+
+@font-face {
+
+	font-family: "Raleway Medium";
+
+	src: url("../fonts/raleway/medium/raleway-medium.woff2") format('woff2'),
+		 url("../fonts/raleway/medium/raleway-medium.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-medium {
+
+	font-family: "Raleway Medium", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Medium Italic
+
+@font-face {
+
+	font-family: "Raleway Medium Italic";
+
+	src: url("../fonts/raleway/medium-italic/raleway-medium-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/medium-italic/raleway-medium-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-medium-italic {
+
+	font-family: "Raleway Medium Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Semibold
+
+@font-face {
+
+	font-family: "Raleway Semibold";
+
+	src: url("../fonts/raleway/semibold/raleway-semibold.woff2") format('woff2'),
+		 url("../fonts/raleway/semibold/raleway-semibold.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-semibold {
+
+	font-family: "Raleway Semibold", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Semibold Italic
+
+@font-face {
+
+	font-family: "Raleway Semibold Italic";
+
+	src: url("../fonts/raleway/semibold-italic/raleway-semibold-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/semibold-italic/raleway-semibold-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-semibold-italic {
+
+	font-family: "Raleway Semibold Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Bold
+
+@font-face {
+
+	font-family: "Raleway Bold";
+
+	src: url("../fonts/raleway/bold/raleway-bold.woff2") format('woff2'),
+		 url("../fonts/raleway/bold/raleway-bold.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-bold {
+
+	font-family: "Raleway Bold", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Bold Italic
+
+@font-face {
+
+	font-family: "Raleway Bold Italic";
+
+	src: url("../fonts/raleway/bold-italic/raleway-bold-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/bold-italic/raleway-bold-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-bold-italic {
+
+	font-family: "Raleway Bold Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Extrabold
+
+@font-face {
+
+	font-family: "Raleway Extrabold";
+
+	src: url("../fonts/raleway/extrabold/raleway-extrabold.woff2") format('woff2'),
+		 url("../fonts/raleway/extrabold/raleway-extrabold.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-extrabold {
+
+	font-family: "Raleway Extrabold", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Extrabold Italic
+
+@font-face {
+
+	font-family: "Raleway Extrabold Italic";
+
+	src: url("../fonts/raleway/extrabold-italic/raleway-extrabold-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/extrabold-italic/raleway-extrabold-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-extrabold-italic {
+
+	font-family: "Raleway Extrabold Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Black
+
+@font-face {
+
+	font-family: "Raleway Black";
+
+	src: url("../fonts/raleway/black/raleway-black.woff2") format('woff2'),
+		 url("../fonts/raleway/black/raleway-black.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-black {
+
+	font-family: "Raleway Black", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+// Black Italic
+
+@font-face {
+
+	font-family: "Raleway Black Italic";
+
+	src: url("../fonts/raleway/black-italic/raleway-black-italic.woff2") format('woff2'),
+		 url("../fonts/raleway/black-italic/raleway-black-italic.woff") format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@mixin raleway-black-italic {
+
+	font-family: "Raleway Black Italic", "Helvetica Neue", Helvetica, Arial sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+}

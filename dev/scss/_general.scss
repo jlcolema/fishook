@@ -1,0 +1,391 @@
+
+/*-------------------------------------------
+	Baseline Styles
+-------------------------------------------*/
+
+
+html {
+
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
+}
+
+body {
+
+	@include font-size(16);
+	line-height: 1.5;
+	@include raleway-regular;
+	color: $charcoal;
+	background: $white;
+
+}
+
+
+/* Block Level */
+
+
+h1 {
+
+	margin: 0.5em 0;
+	@include font-size(40);
+	line-height: 1.25;
+	@include playfair-display-regular;
+
+}
+
+h2 {
+
+	margin: 0.5em 0;
+	@include font-size(32);
+	line-height: 1.25;
+	@include playfair-display-regular;
+
+}
+
+h3 {
+
+	margin: 0.5em 0;
+	@include font-size(28);
+	line-height: 1.5;
+	@include playfair-display-regular;
+
+}
+
+h4 {
+
+	margin: 0.5em 0;
+	@include font-size(24);
+	line-height: 1.5;
+	@include playfair-display-regular;
+
+}
+
+h5 {
+
+	margin: 0.5em 0;
+	@include font-size(20);
+	line-height: 1.5;
+	@include playfair-display-regular;
+
+}
+
+h6 {
+
+	margin: 0.5em 0;
+	@include font-size(16);
+	line-height: 1.5;
+	@include playfair-display-regular;
+
+}
+
+p {
+
+	margin: 1em 0;
+
+	&:last-of-type {}
+
+}
+
+ol {
+
+	margin: 0.5em 0;
+	padding: 0 0 0 1.25em;
+
+	li {}
+
+}
+
+ul {
+
+	margin: 0.5em 0;
+	padding: 0 0 0 1.25em;
+	list-style-type: square;
+
+	li {}
+
+}
+
+dl {}
+
+	dt {
+
+		@include raleway-bold;
+
+	}
+
+	dd {}
+
+table {}
+
+	thead {}
+
+	tbody {}
+
+	tfoot {}
+
+		tr {}
+
+			th {
+
+				@include raleway-bold;
+
+			}
+
+			td {}
+
+article {}
+
+caption {}
+
+figure {}
+
+figcaption {
+
+	// margin: 20px 0 0 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-italic;
+
+}
+
+blockquote {
+
+	p {}
+
+}
+
+/* Inline */
+
+i,
+em {
+
+	@include raleway-italic;
+
+}
+
+cite {
+
+	// @include font-size(15);
+	// line-height: (18/15) + em;
+
+	&:before {
+
+		// content: "— ";
+
+	}
+
+}
+
+b,
+strong {
+
+	@include raleway-bold;
+
+}
+
+a {
+
+	// color: rgb(66, 165, 205);
+	// text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {}
+
+}
+
+img {
+
+	// display: block;
+	box-sizing: content-box;
+
+}
+
+code {}
+
+sub, sup {
+
+	// line-height: 0;
+
+}
+
+ins {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// text-decoration: none;
+
+}
+
+mark {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// font-style: italic;
+	// font-weight: bold;
+
+}
+
+::-moz-selection {
+
+	// color: $black;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+::selection {
+
+	// color: $gray;
+	// background: rgb(246, 203, 32);
+	// text-shadow: none;
+
+}
+
+
+// Mozilla doesn't style place holders by default
+
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+form {}
+
+fieldset {}
+
+legend {
+
+	// display: block;
+	// margin: 0 0 10px 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+
+}
+
+label {
+
+	// display: block;
+	// margin: 0 0 10px 0;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+
+}
+
+input {
+
+	&[type="text"],
+	&[type="search"],
+	&[type="email"],
+	&[type="tel"],
+	&[type="password"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		// display: block;
+		// width: 100%;
+		// padding: 5px 10px;
+		// @include font-size(16);
+		// line-height: (20/16) + em;
+		// @include ff-tisa-sans-regular;
+		// color: rgb(68, 68, 68);
+		// border: 1px solid rgb(230, 230, 230);
+		// border: 1px solid rgba($black, 0.25);
+		// @include border-radius(0);
+
+	}
+
+	&[type="checkbox"] {
+
+		// position: relative;
+		// top: -3px;
+		// margin: 0 7px 0 0;
+
+	}
+
+	&[type="radio"] {
+
+		// position: relative;
+		// top: -4px;
+		// margin: 0 5px 0 0;
+
+	}
+
+	&[type="button"],
+	&[type="submit"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		// display: block;
+		// padding: 11px 25px;
+		// @include font-size(16);
+		// line-height: (20/16) + em;
+		// @include ff-tisa-sans-regular;
+		// text-transform: uppercase;
+		// text-align: center;
+		// color: $white;
+		// background: rgb(66, 165, 205);
+		// border: none;
+		// @include border-radius(5px);
+		// @include box-shadow(0 3px 0 rgb(57, 135, 167));
+
+	}
+
+}
+
+textarea {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	// display: block;
+	// width: 100%;
+	// max-width: 100%;
+	// padding: 8px 10px;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// color: rgb(68, 68, 68);
+	// border: 1px solid rgb(230, 230, 230);
+	// border: 1px solid rgba($black, 0.25);
+	// @include border-radius(0);
+
+}
+
+button {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	// display: block;
+	// padding: 11px 25px;
+	// @include font-size(16);
+	// line-height: (20/16) + em;
+	// @include ff-tisa-sans-regular;
+	// text-transform: uppercase;
+	// text-align: center;
+	// color: $white;
+	// background: rgb(66, 165, 205);
+	// border: none;
+	// @include border-radius(0);
+
+}
