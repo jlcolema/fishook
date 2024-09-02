@@ -1,21 +1,24 @@
+*.nova
+*.code-workspace
 
 # Miscellaneous
 
 .DS_Store
 node_modules/
 
-# Cache
-
-dist/public/system
-
-# Settings
-
-# Images
-
-details.png
-
 # Title
 
 *.sql
 config.php
 license.key
+
+organize/*
+
+dist/public/*
+!dist/public/system/
+dist/public/system/*
+!dist/public/system/user/
+dist/public/system/user/*
+!dist/public/system/user/templates/
+dist/public/system/user/templates/*
+!dist/public/system/user/templates/fishook/

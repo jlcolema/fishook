@@ -1,0 +1,224 @@
+
+{layout="_layouts/base"}
+
+<h1 class="m-b-3">Rideshare</h1>
+
+<form class="m-b-2">
+
+	<div class="row">
+
+		<div class="col-md-7">
+
+			<div class="form-group">
+
+				<label for="example-search-input" class="sr-only">Search</label>
+
+				<input class="form-control" type="search" placeholder="Search" id="example-search-input">
+
+			</div>
+
+		</div>
+
+		<div class="col-md-3">
+
+			<div class="form-group">
+
+				<label for="exampleSelect1" class="sr-only">Type</label>
+
+				<select class="form-control" id="exampleSelect1">
+
+					<option>All Types</option>
+					<option>Purse Seiner</option>
+					<option>Longlining</option>
+					<option>Trawling</option>
+					<option>Pot Fishing</option>
+					<option>Gillnetting</option>
+					<option>Trolling</option>
+
+				</select>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-2">
+
+			<button type="submit" class="btn btn-primary btn-block">Search</button>
+
+		</div>
+
+	</div>
+
+</form>
+
+<table class="table table-striped m-b-3">
+
+	<thead>
+
+		<tr>
+
+			<th>Title</th>
+
+			<th>Title</th>
+
+			<th>Location</th>
+
+			<th>Comments</th>
+
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+		{exp:channel:entries channel="rideshare"}
+
+			<tr>
+
+				<td>
+
+					<img src="http://placehold.it/50x50" alt="Description of image." class="pull-sm-left m-r-1" />
+
+					<p class="font-weight-bold m-a-0">
+
+						<a href="{url_title_path='rideshare/entry'}">{title}</a>
+
+					</p>
+
+					<p class="m-a-0">
+
+						<a href="{path='member/{member_id}'}">{author}</a>
+
+					</p>
+
+				</td>
+
+				<td>Description</td>
+
+				<td>{rideshare_city}, {rideshare_state}</td>
+
+				<td>{comment_total}</td>
+
+			</tr>
+
+		{/exp:channel:entries}
+
+	</tbody>
+
+</table>
+
+{if logged_in}
+
+	<h2 class="h6 m-b-1">Your Archived Rideshare Items</h2>
+
+	<table class="table table-striped m-b-3">
+
+		<thead>
+
+			<tr>
+
+				<th>Title</th>
+
+				<th>Title</th>
+
+				<th>Location</th>
+
+				<th>Comments</th>
+
+			</tr>
+
+		</thead>
+
+		<tbody>
+
+			{exp:channel:entries channel="rideshare" status="closed" author_id="CURRENT_USER"}
+
+				<tr>
+
+					<td>
+
+						<img src="http://placehold.it/50x50" alt="Description of image." class="pull-sm-left m-r-1" />
+
+						<p class="font-weight-bold m-a-0">
+
+							<a href="{url_title_path='rideshare/entry'}">{title}</a>
+
+						</p>
+
+						<p class="m-a-0">
+
+							<a href="{path='member/{member_id}'}">{author}</a>
+
+						</p>
+
+					</td>
+
+					<td>Description</td>
+
+					<td>{rideshare_city}, {rideshare_state}</td>
+
+					<td>{comment_total}</td>
+
+				</tr>
+
+				{if no_results}
+
+					<tr>
+
+						<td colspan="4" class="p-t-2">
+
+							<p class="text-xs-center font-italic text-muted">No archived rideshare items.</p>
+
+						</td>
+
+					</tr>
+
+				{/if}
+
+			{/exp:channel:entries}
+
+		</tbody>
+
+	</table>
+
+{/if}
+
+<div class="post-your-job p-y-3">
+
+	<div class="row">
+
+		<div class="col-md-6">
+
+			<h2>Post a Rideshare</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat tempor hendrerit. Duis luctus mattis lectus.</p>
+
+			<h3>Benefit One</h3>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat.</p>
+
+			<h3>Benefit Two</h3>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat.</p>
+
+			<a href="/rideshare/post/" class="btn btn-primary">Post an Item</a>
+
+		</div>
+
+		<div class="col-md-6 text-xs-center">
+
+			<img src="http://placehold.it/200x200" alt="Description of image." class="img-circle" />
+
+			<blockquote class="blockquote m-t-1">
+
+				<p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+				<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+
+			</blockquote>
+
+		</div>
+
+	</div>
+
+</div>

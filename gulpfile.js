@@ -46,12 +46,12 @@ gulp.task('js', function() {
 
 	return gulp.src([
 
-		'dev/js/jquery.js',
-		'dev/js/modernizr.js',
-		'dev/js/picturefill.js',
-		'dev/js/flexslider.js',
-		'dev/js/scroll.js',
-		'dev/js/functions.js'
+		'src/js/jquery.js',
+		'src/js/modernizr.js',
+		'src/js/picturefill.js',
+		'src/js/flexslider.js',
+		'src/js/scroll.js',
+		'src/js/functions.js'
 
 	])
 
@@ -75,7 +75,7 @@ gulp.task('js', function() {
 
 gulp.task('sass', function() {
 
-	return gulp.src('dev/scss/**/*.scss')
+	return gulp.src('src/scss/**/*.scss')
 
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 
@@ -102,7 +102,7 @@ gulp.task('sass', function() {
 
 gulp.task('img', function() {
 
-	return gulp.src('dev/img/**/*')
+	return gulp.src('src/img/**/*')
 
 	.pipe(imagemin({
 
@@ -126,7 +126,7 @@ gulp.task('img', function() {
 
 gulp.task('fonts', function() {
 
-	return gulp.src('dev/fonts/**/*')
+	return gulp.src('src/fonts/**/*')
 
 	.pipe(gulp.dest('dist/public/assets/fonts'));
 
@@ -154,19 +154,19 @@ gulp.task('watch', function() {
 
 	// Notes...
 
-	gulp.watch('dev/js/*.js', ['js']);
+	gulp.watch('src/js/*.js', ['js']);
 
 	// Notes...
 
-	gulp.watch('dev/scss/**/*.scss', ['sass']);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
 
 	// Notes...
 
-	gulp.watch('dev/img/**/*', ['img']);
+	gulp.watch('src/img/**/*', ['img']);
 
 	// Notes...
 
-	gulp.watch('dev/fonts/**/*', ['fonts']);
+	gulp.watch('src/fonts/**/*', ['fonts']);
 
 });
 

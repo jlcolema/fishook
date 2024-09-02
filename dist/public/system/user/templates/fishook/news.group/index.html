@@ -1,0 +1,54 @@
+
+{layout="_layouts/base"}
+
+<h1>News</h1>
+
+<div class="row">
+
+	<div class="col-md-8">
+
+		{exp:channel:entries channel="news"}
+
+			<!-- Article -->
+
+			<img src="http://placehold.it/1200x800" alt="Description of image." class="img-fluid m-b-1" />
+
+			<h2>{title}</h2>
+
+			<p>Oct. 9, 2016 by {author}</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat.</p>
+
+			<a href="{url_title_path='news/entry'}" class="btn btn-primary m-b-3">Read more</a>
+
+		{/exp:channel:entries}
+
+	</div>
+
+	<div class="col-md-4">
+
+		<h3>Search</h3>
+
+		<div class="form-group">
+
+			<label for="example-search-input">Search</label>
+
+			<input class="form-control" type="search" placeholder="Search" id="example-search-input">
+
+		</div>
+
+		<h3>Categories</h3>
+
+		<div class="list-group">
+
+			<a href="#" class="list-group-item list-group-item-action">Title</a>
+			<a href="#" class="list-group-item active">Title</a>
+			<a href="#" class="list-group-item list-group-item-action">Title</a>
+			<a href="#" class="list-group-item list-group-item-action">Title</a>
+			<a href="#" class="list-group-item list-group-item-action">Title</a>
+
+		</div>
+
+	</div>
+
+</div>

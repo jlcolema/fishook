@@ -1,0 +1,276 @@
+
+{layout="_layouts/base"}
+
+{exp:channel:entries channel="market" limit="1" status="open|closed"}
+
+	<h1>{title}</h1>
+
+	<p>{if market_trade}For Sale or Trade{if:else}For Sale{/if} / {market_city}, {market_state}</p>
+
+	<div class="row">
+
+		<div class="col-md-8">
+
+			<div id="carousel-example-generic" class="carousel slide m-b-1" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+
+					<div class="carousel-item active">
+
+						<img src="http://placehold.it/800x600" alt="Description of image." class="img-fluid" />
+
+					</div>
+
+					<div class="carousel-item">
+
+						<img src="http://placehold.it/800x600" alt="Description of image." class="img-fluid" />
+
+					</div>
+
+					<div class="carousel-item">
+
+						<img src="http://placehold.it/800x600" alt="Description of image." class="img-fluid" />
+
+					</div>
+
+				</div>
+
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+
+					<span class="icon-prev" aria-hidden="true"></span>
+
+					<span class="sr-only">Previous</span>
+
+				</a>
+
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+
+					<span class="icon-next" aria-hidden="true"></span>
+
+					<span class="sr-only">Next</span>
+
+				</a>
+
+			</div>
+
+			<p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat tempor hendrerit. Duis luctus mattis lectus, id molestie dui pulvinar nec.</p>
+
+			<p>Phasellus fermentum odio vel libero convallis, in volutpat ligula tempus. Ut cursus velit eu imperdiet finibus. Aliquam accumsan est tempus lectus ultricies efficitur. Mauris nisi odio, tempus eget felis eu, congue accumsan lectus. Sed metus elit, fringilla in mi et, mattis pulvinar risus. Proin iaculis lacinia lacus quis sagittis. Praesent vulputate, lorem eget condimentum maximus, lacus justo tempor tellus, finibus rhoncus quam dui sed nunc.</p>
+
+			<p>Suspendisse lobortis ligula nibh, ac porta nulla porttitor sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sit amet tortor vitae quam pulvinar cursus id id orci. Morbi at sapien sit amet sapien eleifend fringilla. Proin et dui id ligula varius aliquam. Quisque hendrerit consequat elit, pharetra tristique urna. Donec laoreet erat a justo auctor, id ullamcorper elit accumsan.</p>
+
+			<ul>
+
+				<li>Cras at erat gravida, porta magna quis, dapibus leo.</li>
+				<li>Phasellus dolor turpis, aliquam semper fermentum non, lacinia vitae enim.</li>
+				<li>Maecenas a quam a mi commodo dignissim.</li>
+
+			</ul>
+
+			<h2>Title</h2>
+
+			<ul>
+
+				<li>Suspendisse luctus orci in magna ullamcorper, et posuere urna finibus.</li>
+				<li>In laoreet auctor laoreet.</li>
+				<li>Pellentesque dui diam, pretium ut velit vitae, finibus lobortis leo.</li>
+				<li>Nam vitae purus lorem. Duis euismod ornare neque ut ullamcorper.</li>
+				<li>In tincidunt ex eu magna euismod porta.</li>
+
+			</ul>
+
+			<p>Nullam ultricies, dui quis ultrices mollis, sapien libero rutrum mi, bibendum porta metus orci vitae justo. Nam nisl magna, condimentum et lacinia sit amet, blandit non sem.</p>
+
+			{if logged_in_member_id == author_id}
+
+				<a href="{path='market/edit/{url_title}'}" class="btn btn-primary">Edit this Entry</a>
+
+			{/if}
+
+			<h2 class="m-y-3">Comments</h2>
+
+			<div class="m-b-3">
+
+				{exp:comment:form channel="market" preview="market/preview"}
+
+					{if logged_out}
+
+						<div class="form-group">
+
+							<label for="name">Name</label>
+
+							<input type="text" name="name" id="name" value="{name}" class="form-control" />
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="email">Email</label>
+
+							<input type="text" name="email" value="{email}" id="email" class="form-control" />
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="location">Location</label>
+
+							<input type="text" name="location" value="{location}" id="location" class="form-control" />
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="url">URL:</label>
+
+							<input type="text" name="url" value="{url}" id="url" class="form-control" />
+
+						</div>
+
+					{/if}
+
+					<div class="form-group">
+
+						<label for="comment">Comment</label>
+
+						<textarea name="comment" rows="10" id="comment" class="form-control">{comment}</textarea>
+
+					</div>
+
+					<div class="form-check">
+
+						<label class="">
+
+							<input type="checkbox" name="save_info" value="yes" {save_info} />
+
+							Remember my personal information
+
+						</label>
+
+					</div>
+
+					<div class="form-check">
+
+						<label class="">
+
+							<input type="checkbox" name="notify_me" value="yes" {notify_me} />
+
+							Notify me of follow-up comments?
+
+						</label>
+
+					</div>
+
+					{if captcha}
+
+						<div class="form-group">
+
+							<label for="captcha">Please enter the word you see in the image below:</label>
+
+							<p>{captcha}<br /><input type="text" name="captcha" value="{captcha_word}" maxlength="20" /></p>
+
+						</div>
+
+					{/if}
+
+					<button type="submit" name="submit" class="btn btn-primary">Post Comment</button>
+
+					<button type="submit" name="preview" class="btn m-l-1">Preview</button>
+
+				{/exp:comment:form}
+
+			</div>
+
+			{exp:comment:entries sort="asc" limit="20"}
+
+				<div class="media">
+
+					<div class="media-left">
+
+						<a href="#">
+
+							<img class="media-object" src="http://placehold.it/50x50" alt="Generic placeholder image">
+
+						</a>
+
+					</div>
+
+					<div class="media-body">
+
+						<h4 class="media-heading">{name}</h4>
+
+						<p>{comment_date format="%M. %d, %Y"}</p>
+
+						{comment}
+
+					</div>
+
+				</div>
+
+			{/exp:comment:entries}
+
+		</div>
+
+		<div class="col-md-4">
+
+			<img src="http://placehold.it/200x200" alt="Description of image." />
+
+			<h3>{author}</h3>
+
+			<p>Company</p>
+
+			<ul class="nav nav-inline">
+
+				<li class="nav-item">
+
+					<a href="#" class="nav-link">
+
+						<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> <span class="sr-only">Facebook</span>
+
+					</a>
+
+				</li>
+
+				<li class="nav-item">
+
+					<a href="#" class="nav-link">
+
+						<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> <span class="sr-only">Twitter</span>
+
+					</a>
+
+				</li>
+
+				<li class="nav-item">
+
+					<a href="#" class="nav-link">
+
+						<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i> <span class="sr-only">Google Plus</span>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+			<h4 class="h6 m-t-1">Other Items by {author}</h4>
+
+			<ul>
+
+				{embed="_includes/related-market" author_id="{author_id}"}
+
+			</ul>
+
+		</div>
+
+	</div>
+
+{/exp:channel:entries}

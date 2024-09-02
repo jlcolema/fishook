@@ -1,0 +1,56 @@
+
+{layout="_layouts/base"}
+
+<h1>Post a Rideshare Item</h1>
+
+<div class="row">
+
+	<div class="col-md-8">
+
+		{exp:channel:form channel="rideshare" error_handling="inline" return="rideshare"}
+
+			<div class="form-group">
+
+				<label for="title">Title</label>
+
+				<input type="text" name="title" id="title" class="form-control" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+
+				{error:title}
+
+			</div>
+
+			<div class="form-group">
+
+				<legend>Location</legend>
+
+				<label for="rideshare_city">City</label>
+
+				<input type="text" name="rideshare_city" id="rideshare_city" value="{rideshare_city}" />
+
+				{label:rideshare_state}
+
+				<select name="rideshare_state" id="state" class="form-control m-b-1">
+
+					{options:rideshare_state}
+
+						<option value="{option_value}"{selected}>{option_name}</option>
+
+					{/options:rideshare_state}
+
+				</select>
+
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+
+		{/exp:channel:form}
+
+	</div>
+
+	<div class="col-md-4">
+
+
+
+	</div>
+
+</div>
